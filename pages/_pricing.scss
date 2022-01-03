@@ -1,0 +1,115 @@
+.price {
+  display: flex;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    margin-bottom: 1.6rem;
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-right: 3rem;
+
+      @include respond(phone) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+  }
+  h3 {
+    color: $color-secondary-pink;
+  }
+
+  &__items {
+    display: flex;
+    border-top: 1px solid rgba($color-secondary-normal, 0.2);
+    border-bottom: 1px solid rgba($color-secondary-normal, 0.2);
+    margin-bottom: 3rem;
+    @include respond(tab-land) {
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    margin-bottom: 3rem;
+    padding: 2.4rem 0;
+  }
+
+  &__item {
+    list-style: none;
+    color: $color-secondary-normal;
+    font-size: 1.6rem;
+
+    @include respond(tab-land) {
+      text-align: start;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1.4rem;
+      width: 2rem;
+      background-color: $color-primary-pink;
+      // background-image: url(../../assets/shared/desktop/icon-check.svg);
+      -webkit-mask-image: url(../../assets/shared/desktop/icon-check.svg);
+      mask-image: url(../../assets/shared/desktop/icon-check.svg);
+      -webkit-mask-size: cover;
+      mask-size: cover;
+
+      // background-repeat: no-repeat;
+      // background-size: contain;
+      // background-position: bottom;
+      margin-right: 2.4rem;
+    }
+
+    &--1 {
+      &:last-child,
+      &:nth-child(5),
+      &:nth-child(4),
+      &:nth-child(6) {
+        opacity: 0.5;
+        &::before {
+          content: "";
+          // background-image: none;
+          background-color: transparent;
+          -webkit-mask-image: none;
+          mask-image: none;
+          display: inline-block;
+          height: 1.4rem;
+          width: 2rem;
+          margin-right: 2.4rem;
+        }
+      }
+    }
+    &--2 {
+      &:last-child,
+      &:nth-child(6) {
+        opacity: 0.5;
+        &::before {
+          content: "";
+          // background-image: none;
+          background-color: transparent;
+          -webkit-mask-image: none;
+          mask-image: none;
+          display: inline-block;
+          height: 1.4rem;
+          width: 2rem;
+          margin-right: 2.4rem;
+        }
+      }
+    }
+  }
+}

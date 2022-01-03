@@ -1,0 +1,52 @@
+.cta-form {
+  // display: grid;
+  // grid-template-columns: repeat(5, minmax(5rem, 9.25rem));
+  // grid-template-columns: repeat(6, min-max(1fr, 9.25rem));
+  // grid-template-rows: repeat(2, min-content);
+  margin-bottom: 1.8rem;
+  @include respond(phone) {
+    margin-bottom: 2.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    position: relative;
+
+    font-size: inherit;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+
+    line-height: 2rem;
+    border: none;
+    outline: none;
+    padding: 1.6rem 28.9rem 1.2rem 2.6rem;
+    background-color: $color-primary-white;
+    border-radius: 100rem;
+
+    // grid-column: 1/6;
+    // grid-row: 1/2;
+    // align-self: start;
+    color: $color-secondary-normal;
+
+    @include respond(phone) {
+      padding: 1.6rem 2rem 1.2rem 2.6rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+  ::placeholder {
+    color: $color-secondary-light;
+    font-weight: 100;
+    opacity: 0.5;
+  }
+  &__btn {
+    position: absolute;
+    margin-left: -18rem;
+    // grid-column: 4/6;
+    // grid-row: 1/2;
+    // align-self: start;
+    @include respond(phone) {
+      position: relative;
+      margin-left: 0;
+    }
+  }
+}

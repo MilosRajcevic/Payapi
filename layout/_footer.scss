@@ -1,0 +1,97 @@
+.footer-back {
+  background-color: $color-secondary-dark;
+}
+.footer {
+  padding: 4rem 0;
+
+  display: flex;
+  align-items: center;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  .social__logo {
+    &:nth-last-of-type() {
+      margin-right: 2.4rem;
+    }
+    fill: $color-primary-white;
+    &:hover {
+      fill: $color-secondary-pink;
+    }
+  }
+
+  &__logo {
+    margin-right: 6.4rem;
+    fill: $color-primary-white;
+
+    @include respond(phone) {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__nav {
+    margin-right: auto;
+
+    @include respond(phone) {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 4.6rem;
+
+      @include respond(phone) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+    }
+    &--1 {
+      &:not(:last-child) {
+        margin-right: 2.4rem;
+
+        @include respond(phone) {
+          margin-right: 2.4rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-primary-white;
+      opacity: 0.7;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  &__logo-box {
+    display: flex;
+    align-items: center;
+  }
+  &__link-logo {
+    text-decoration: none;
+  }
+}

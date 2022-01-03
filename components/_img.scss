@@ -1,0 +1,60 @@
+.img-box {
+  @include respond(tab-land) {
+    margin-bottom: 4.8rem;
+  }
+}
+.img {
+  margin-left: auto;
+  width: auto !important;
+  height: auto !important;
+
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+
+  @include respond(phone) {
+    max-height: 50vh;
+    max-width: 90vw;
+    border-radius: 1rem;
+  }
+}
+
+.logo-image {
+  fill: #fff;
+  color: #f00;
+}
+
+.cir {
+  position: relative;
+  background-image: url(../../assets/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+
+  &--1 {
+    background-position: calc(50% + 45rem) -15rem;
+
+    @include respond(tab-land) {
+      background-position: center calc(-70rem);
+      background-size: 960px 960px;
+    }
+
+    @include respond(tab-port) {
+      background-position: center calc(-50rem);
+    }
+  }
+
+  &--mid-r {
+    background-repeat: no-repeat;
+    background-position: calc(50% + 70rem) + 90rem;
+
+    @include respond(tab-land) {
+      background-image: none;
+    }
+  }
+
+  &--2 {
+    background-position: calc(50% + 45rem) -50rem;
+
+    @include respond(tab-port) {
+      background-position: calc(50% + 45rem) -55rem;
+    }
+  }
+}
