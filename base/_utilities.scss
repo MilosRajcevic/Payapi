@@ -1,0 +1,14 @@
+.u-margin-bottom-md {
+  margin-bottom: 15rem;
+
+  @include respond(tab-land) {
+    margin-bottom: 10rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 9rem;
+  }
+}
+.u-margin-bottom-sm {
+  margin-bottom: 10rem;
+}
